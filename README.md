@@ -1,75 +1,59 @@
-# React + TypeScript + Vite
+<!--
+Title:
+    README.md
+Description:
+    Introduces CodeWithMi and explains local setup, commands, and repository structure.
+Authors:
+    Oluwapelumi Samuel Coker
+-->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CodeWithMi
 
-Currently, two official plugins are available:
+CodeWithMi is the personal portfolio website of Oluwapelumi Samuel Coker, built to showcase software projects, technical interests, and development progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The site uses React, TypeScript, and Vite, with CSS for styling. It is currently under development: the application renders the site header, while project data and project display components are available in the source code.
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install Node.js and npm, then run these commands from the repository root:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local URL printed by Vite in your terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available commands
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Check TypeScript and create a production build in `dist/`. |
+| `npm run lint` | Check the repository with ESLint. |
+| `npm run preview` | Serve the production build locally after running `npm run build`. |
 
+## Repository structure
+
+```text
+src/
+  assets/          Images imported by components
+  components/      React components and their matching CSS files
+  data/            Portfolio project data and its TypeScript model
+  App.tsx          Root application component
+  App.css          Application-level stylesheet
+  index.css        Global styles and theme variables
+  main.tsx         React entry point
+public/            Static assets served directly
+CONTRIBUTING.md    Naming conventions and file header standards
 ```
+
+Edit `src/data/projects.ts` to update portfolio project entries. The `Projects.tsx` component renders the collection, and `ProjectCard.tsx` displays each project's details.
+
+## Repository conventions
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) for file naming, code naming, CSS conventions, and the required file header format.
+
+## Author
+
+Oluwapelumi Samuel Coker
