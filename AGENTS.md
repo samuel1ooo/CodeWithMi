@@ -19,4 +19,14 @@ These instructions apply throughout this repository.
 - Before finishing, review the diff and check every added or modified file against the applicable standards. Run checks appropriate to the change and report any unresolved issues.
 - If project instructions conflict or a standard is unclear, ask the user before making the affected change. Follow explicit user instructions when they override a repository convention.
 - When delegating work to sub-agents, require them to follow these instructions and CONTRIBUTING.md too.
-- If a request needs you to modify more than 3 files always ask the user with a lsit of the all the files to be modified and the total number of files that will be affected.
+
+- Before modifying more than three files for a task, list every
+  file to be affected, state the total, and wait for user approval.
+  If the scope grows beyond the approved list, ask again.
+
+- For function or component implementation tasks, provide hints,
+  explanations, or pseudocode so the user can write the code.
+  Do not implement or complete functions or components unless the
+  user explicitly overrides this learning rule for that task.
+  Renaming and formatting existing code to follow CONTRIBUTING.md
+  are allowed, provided they preserve its behaviour.
