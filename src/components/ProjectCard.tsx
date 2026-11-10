@@ -14,6 +14,11 @@ interface ProjectCardProps{
     project: Project;
 }
 
+const statusClasses = {
+    "Completed": "completed",
+    "In Progress": "in-progress",
+    "Planned": "planned"
+}
 // Display the Project details
 export function ProjectCard({ project }: ProjectCardProps){
     return (
@@ -28,12 +33,13 @@ export function ProjectCard({ project }: ProjectCardProps){
             <p>{project.category}</p>
             
             {/* Display approprriate Status */}
-            <p>
-                { project.status === "Completed"
-                        ? "✓ Completed"
-                        : project.status === "In Progress"
-                        ? "◷ In Progress" : "Planned"
-                } 
+            <p className={`status ${statusClasses[project.status]}`}>
+                    { project.status === "Completed"
+                            ? "✓ Completed"
+                            : project.status === "In Progress"
+                            ? "◷ In Progress"
+                            : "Planned"
+                    } 
             </p>
 
            {/* Check that GitHub link is not empty */}

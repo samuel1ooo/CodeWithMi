@@ -14,7 +14,11 @@ export function Header(){
     return(
         <header>
             <div>
-                <img src={bannerLogo} alt="CodeWithMi Logo" />
+                <img
+                    className="header-logo"
+                    src={bannerLogo}
+                    alt="CodeWithMi Logo"
+                />
             </div>
             <div>
                 <nav>

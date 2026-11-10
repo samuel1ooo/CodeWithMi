@@ -6,3 +6,10 @@ Description:
 Authors:
     Oluwapelumi Samuel Coker
 */
+
+.app-content {
+    width: 100%;
+    max-width: 1126px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
